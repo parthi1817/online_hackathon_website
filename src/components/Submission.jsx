@@ -17,7 +17,7 @@ export default function Submission({ prefilledTeamId = '' }) {
   const [formData, setFormData] = useState({
     teamId: prefilledTeamId || '',
     projectTitle: '',
-    track: 'Artificial Intelligence & Smart Agents',
+    track: 'PS-ED01: Regional Language AI Tutor & Homework Helper',
     githubUrl: '',
     videoUrl: '',
     liveDemoUrl: '',
@@ -278,10 +278,14 @@ export default function Submission({ prefilledTeamId = '' }) {
                 outline: 'none'
               }}
             >
-              <option value="Artificial Intelligence & Smart Agents">Artificial Intelligence & Smart Agents</option>
-              <option value="FinTech, Security & Decentralized Tech">FinTech, Security & Decentralized Tech</option>
-              <option value="EdTech, HealthTech & Social Impact">EdTech, HealthTech & Social Impact</option>
-              <option value="Open Innovation & Wildcard">Open Innovation & Wildcard</option>
+              <optgroup label="Education Domain">
+                <option value="PS-ED01: Regional Language AI Tutor & Homework Helper">PS-ED01: Regional Language AI Tutor & Homework Helper</option>
+                <option value="PS-ED02: Personalized AI Learning & Exam Prep Platform">PS-ED02: Personalized AI Learning & Exam Prep Platform</option>
+              </optgroup>
+              <optgroup label="Healthcare Domain">
+                <option value="PS-HC01: Emergency Blood Donor & Rare Group Matcher">PS-HC01: Emergency Blood Donor & Rare Group Matcher</option>
+                <option value="PS-HC02: Smart Hospital Queue & Appointment Manager">PS-HC02: Smart Hospital Queue & Appointment Manager</option>
+              </optgroup>
             </select>
           </div>
 

@@ -89,7 +89,7 @@ export default function App() {
 
         {activeTab === 'tracks' && (
           <div style={{ paddingTop: '80px' }}>
-            <Tracks />
+            <Tracks setActiveTab={setActiveTab} />
           </div>
         )}
 

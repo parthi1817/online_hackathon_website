@@ -226,10 +226,10 @@ export default function Hero({ setActiveTab }) {
               <ArrowRight size={20} color="#ff2a7a" />
             </div>
             <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', fontWeight: 700, marginBottom: '8px' }}>
-              4 High-Tech Domains
+              2 Domains • 4 Problem Statements
             </h4>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-              AI & Smart Agents, FinTech & Security, EdTech / Social Impact, and Open Innovation.
+              Focused real-world challenges across Education and Healthcare domains.
             </p>
           </div>
 
