@@ -47,6 +47,18 @@ export default function Submission({ prefilledTeamId = '' }) {
       setErrorMsg('Please enter a valid GitHub repository URL.');
       return;
     }
+    if (!formData.videoUrl.trim()) {
+      setErrorMsg('Please enter your demo video or pitch link.');
+      return;
+    }
+    if (!formData.liveDemoUrl.trim()) {
+      setErrorMsg('Please provide your live prototype / deployment link.');
+      return;
+    }
+    if (!/^https?:\/\//i.test(formData.liveDemoUrl.trim())) {
+      setErrorMsg('Please enter a valid live prototype URL starting with http:// or https://');
+      return;
+    }
 
     setLoading(true);
     try {
@@ -82,7 +94,7 @@ export default function Submission({ prefilledTeamId = '' }) {
 
   const copyReceipt = () => {
     navigator.clipboard.writeText(
-      `ForMa 24H Hackathon Submission Receipt\nTeam ID: ${submittedData.team_id}\nProject: ${submittedData.project_title}\nTimestamp: ${submittedData.submitted_at || new Date().toISOString()}`
+      `ForMa 24H Hackathon Submission Receipt\nTeam ID: ${submittedData.team_id}\nProject: ${submittedData.project_title}\nLive Demo: ${submittedData.live_demo_url || 'N/A'}\nTimestamp: ${submittedData.submitted_at || new Date().toISOString()}`
     );
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
@@ -109,7 +121,7 @@ export default function Submission({ prefilledTeamId = '' }) {
           maxWidth: '650px',
           margin: '0 auto'
         }}>
-          Final code submissions close precisely at 7:30 PM IST on Oct 31. Ensure your GitHub repo is public and your demo video is accessible.
+          Final code submissions close precisely at 7:30 PM IST on Oct 31. Ensure your GitHub repo is public, your live prototype link is working, and your demo video is accessible.
         </p>
       </div>
 
@@ -165,6 +177,17 @@ export default function Submission({ prefilledTeamId = '' }) {
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '10px' }}>
               <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Project Title</span>
               <span style={{ fontWeight: 600 }}>{submittedData.project_title}</span>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '10px' }}>
+              <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Live Prototype</span>
+              <a 
+                href={submittedData.live_demo_url} 
+                target="_blank" 
+                rel="noreferrer" 
+                style={{ color: '#10b981', fontWeight: 600, textDecoration: 'none', maxWidth: '300px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
+              >
+                {submittedData.live_demo_url}
+              </a>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Track</span>
@@ -341,10 +364,11 @@ export default function Submission({ prefilledTeamId = '' }) {
             <div>
               <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: 600, marginBottom: '6px' }}>
                 <ExternalLink size={16} />
-                <span>Live Prototype / Deployment Link (Optional)</span>
+                <span>Live Prototype / Deployment Link *</span>
               </label>
               <input 
                 type="url"
+                required
                 value={formData.liveDemoUrl}
                 onChange={(e) => setFormData({ ...formData, liveDemoUrl: e.target.value })}
                 placeholder="https://myproject.vercel.app"

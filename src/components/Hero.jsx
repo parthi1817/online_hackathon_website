@@ -23,7 +23,7 @@ export default function Hero({ setActiveTab }) {
     },
     {
       q: 'Where do we submit our projects?',
-      a: 'Projects are submitted via the "Submit Project" tab on this website before 7:30 PM on October 31. You will need your Team ID, public GitHub repo link, and a short demo video link.'
+      a: 'Projects are submitted via the "Submit Project" tab on this website before 7:30 PM on October 31. You will need your Team ID, public GitHub repo link, live prototype deployment link, and a short demo video link.'
     },
     {
       q: 'Who is organizing this hackathon?',

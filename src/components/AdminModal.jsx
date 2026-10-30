@@ -1019,7 +1019,17 @@ export default function AdminModal({ isOpen, onClose, onBroadcastSuccess }) {
                           {sub.description}
                         </p>
 
-                        <div style={{ display: 'flex', gap: '16px', fontSize: '0.8rem' }}>
+                        <div style={{ display: 'flex', gap: '16px', fontSize: '0.8rem', flexWrap: 'wrap' }}>
+                          {sub.live_demo_url && (
+                            <a 
+                              href={sub.live_demo_url} 
+                              target="_blank" 
+                              rel="noreferrer"
+                              style={{ color: '#10b981', display: 'flex', alignItems: 'center', gap: '4px', textDecoration: 'none' }}
+                            >
+                              <ExternalLink size={14} /> Live Prototype
+                            </a>
+                          )}
                           {sub.github_url && (
                             <a 
                               href={sub.github_url} 

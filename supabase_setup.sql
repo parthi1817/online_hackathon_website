@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS public.submissions (
     track VARCHAR(255) NOT NULL,
     github_url TEXT NOT NULL,
     video_url TEXT NOT NULL,
-    live_demo_url TEXT,
+    live_demo_url TEXT NOT NULL,
     tech_stack TEXT,
     description TEXT,
     challenges_solved TEXT,
