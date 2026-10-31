@@ -286,7 +286,7 @@ export default function Organizers() {
           </div>
           <div>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>END TIME</span>
-            <div style={{ fontWeight: 700, fontSize: '1.1rem', marginTop: '4px' }}>Oct 31, 7:30 PM IST</div>
+            <div style={{ fontWeight: 700, fontSize: '1.1rem', marginTop: '4px' }}>Oct 31, 12:00 AM Midnight IST (Extended)</div>
           </div>
           <div>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>TEAM DYNAMICS</span>

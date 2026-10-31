@@ -11,7 +11,7 @@ export default function Hero({ setActiveTab }) {
   const faqs = [
     {
       q: 'When does the 24-hour hackathon begin and end?',
-      a: 'The hackathon starts promptly on October 30, 2026, at 7:30 PM IST and concludes exactly 24 hours later on October 31, 2026, at 7:30 PM IST.'
+      a: 'The hackathon starts promptly on October 30, 2026, at 7:30 PM IST and concludes with an extended deadline on October 31, 2026, at 12:00 AM Midnight IST.'
     },
     {
       q: 'How many members are allowed per team?',
@@ -23,7 +23,7 @@ export default function Hero({ setActiveTab }) {
     },
     {
       q: 'Where do we submit our projects?',
-      a: 'Projects are submitted via the "Submit Project" tab on this website before 7:30 PM on October 31. You will need your Team ID, public GitHub repo link, live prototype deployment link, and a short demo video link.'
+      a: 'Projects are submitted via the "Submit Project" tab on this website before 12:00 AM Midnight on October 31 / November 1. You will need your Team ID, public GitHub repo link, live prototype deployment link, and a short demo video link.'
     },
     {
       q: 'Who is organizing this hackathon?',
@@ -98,7 +98,7 @@ export default function Hero({ setActiveTab }) {
           margin: '0 auto 32px auto',
           lineHeight: '1.6'
         }}>
-          24 continuous hours of coding, architecture, and bold ideas. From Oct 30 at 7:30 PM to Oct 31 at 7:30 PM, build alongside passionate creators across the country.
+          Continuous hours of coding, architecture, and bold ideas. From Oct 30 at 7:30 PM to Oct 31 at 12:00 AM Midnight IST (Extended Deadline), build alongside passionate creators across the country.
         </p>
 
         {/* Dynamic Countdown */}
@@ -151,7 +151,7 @@ export default function Hero({ setActiveTab }) {
           margin: '60px auto 0 auto'
         }}>
           {[
-            { icon: Clock, label: 'Duration', val: '24 Hours Non-Stop', desc: '7:30 PM to 7:30 PM IST', color: '#ff2a7a' },
+            { icon: Clock, label: 'Duration', val: 'Extended Sprint', desc: 'Extended till 12:00 AM IST', color: '#ff2a7a' },
             { icon: Users, label: 'Team Size', val: '1 to 4 Members', desc: 'Solo or squad squads', color: '#8e38ff' },
             { icon: Trophy, label: 'Entry Fee', val: '₹200 / Team', desc: 'Pre-paid via Google Form', color: '#10b981' },
             { icon: Code2, label: 'Format', val: '100% Online', desc: 'Discord, Meet & GitHub', color: '#00d2ff' }

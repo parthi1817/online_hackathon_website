@@ -60,10 +60,18 @@ export const initialMockTeams = [
 // Initial default announcements
 export const defaultAnnouncements = [
   {
+    id: 'ann-ext',
+    tag: 'URGENT',
+    title: '⏰ Submission Deadline Extended to 12:00 AM Midnight!',
+    body: 'Great news participants! The submission deadline has been extended until 12:00 AM Midnight IST tonight. Complete your live prototypes and submit.',
+    created_at: new Date().toISOString(),
+    color: '#ff2a7a'
+  },
+  {
     id: 'ann-1',
     tag: 'MILESTONE',
-    title: 'Hackathon Schedule Finalized',
-    body: 'Get ready for 24 hours of non-stop building starting Oct 30, 7:30 PM to Oct 31, 7:30 PM IST.',
+    title: 'Hackathon Schedule & Extended Deadline',
+    body: 'Building sprint active: Oct 30, 7:30 PM to Oct 31, 12:00 AM Midnight IST.',
     created_at: new Date(Date.now() - 1000 * 60 * 5).toISOString(),
     color: '#38bdf8'
   },

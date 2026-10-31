@@ -63,7 +63,7 @@ export default function Footer({ setActiveTab, onOpenAdmin }) {
                 </span>
               </div>
               <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
-                24-Hour Online Hackathon • October 30, 7:30 PM – October 31, 7:30 PM IST
+                Online Hackathon • October 30, 7:30 PM – October 31, 12:00 AM Midnight IST (Extended Deadline)
               </p>
             </div>
           </div>

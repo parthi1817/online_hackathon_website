@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Clock, Flame, CheckCircle, Zap } from 'lucide-react';
 
 export default function Countdown() {
-  // Target: October 30, 2026, 7:30 PM IST (UTC + 05:30)
+  // Target: October 30, 2026, 7:30 PM IST (UTC + 05:30) to Extended Deadline: Nov 1, 2026, 12:00 AM IST (Midnight)
   const targetStartTime = new Date('2026-10-30T19:30:00+05:30').getTime();
-  const targetEndTime = new Date('2026-10-31T19:30:00+05:30').getTime();
+  const targetEndTime = new Date('2026-11-01T00:00:00+05:30').getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: '00',
@@ -85,12 +85,12 @@ export default function Countdown() {
         {timeLeft.status === 'live' ? (
           <>
             <Flame size={16} className="live-dot" />
-            <span>HACKATHON IS LIVE • 24 HOURS IN MOTION</span>
+            <span>HACKATHON IS LIVE • EXTENDED SPRINT TILL 12:00 AM</span>
           </>
         ) : timeLeft.status === 'ended' ? (
           <>
             <CheckCircle size={16} />
-            <span>HACKATHON CONCLUDED • OCT 30–31, 2026</span>
+            <span>HACKATHON CONCLUDED • OCT 30 – NOV 1, 2026</span>
           </>
         ) : (
           <>

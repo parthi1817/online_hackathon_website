@@ -14,8 +14,8 @@ export default function WarRoom({ onOpenAdminModal }) {
     { hour: '08:00', time: 'Oct 31, 3:30 AM', title: 'Midnight Survival & Speed Challenge', desc: 'Grab coffee, hit the typing speed sprint, and push core backend APIs.', active: false, done: false },
     { hour: '12:00', time: 'Oct 31, 7:30 AM', title: 'Halfway Mark: Functional Demo Sync', desc: 'Connect frontend to backend; verify user authentication and main workflow.', active: false, done: false },
     { hour: '18:00', time: 'Oct 31, 1:30 PM', title: 'Checkpoint 2: Code Freeze Warning', desc: 'No new major features. Shift focus to polish, edge cases, and UI cleanup.', active: false, done: false },
-    { hour: '23:00', time: 'Oct 31, 6:30 PM', title: 'Submission Desk Open & Video Prep', desc: 'Record your 2-minute demo video, check public repo permissions, and submit.', active: false, done: false },
-    { hour: '24:00', time: 'Oct 31, 7:30 PM', title: 'Hard Cutoff & Closing Ceremony', desc: 'Submissions automatically lock. Live closing and jury evaluation begins.', active: false, done: false }
+    { hour: '23:00', time: 'Oct 31, 6:30 PM', title: 'Submission Desk Open & Video Prep', desc: 'Record your 2-minute demo video, check public repo permissions, and submit.', active: true, done: true },
+    { hour: 'EXTENDED', time: 'Oct 31, 12:00 AM', title: 'Extended Cutoff & Final Submission Lock', desc: 'Extended deadline closes at midnight. Submissions automatically lock and jury evaluation begins.', active: true, done: false }
   ];
 
   // Live Real-Time Announcements

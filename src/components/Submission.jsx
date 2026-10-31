@@ -121,7 +121,7 @@ export default function Submission({ prefilledTeamId = '' }) {
           maxWidth: '650px',
           margin: '0 auto'
         }}>
-          Final code submissions close precisely at 7:30 PM IST on Oct 31. Ensure your GitHub repo is public, your live prototype link is working, and your demo video is accessible.
+          Final code submissions close precisely at 12:00 AM Midnight IST. Ensure your GitHub repo is public, your live prototype link is working, and your demo video is accessible.
         </p>
       </div>
 
